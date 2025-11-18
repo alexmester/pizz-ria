@@ -1,0 +1,40 @@
+
+.header {
+    width: 100%;
+    height: 400px; 
+    background-image: url(/képek/pizzakep.jpg);
+    background-size: cover;      
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: ;  
+          
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
