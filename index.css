@@ -95,10 +95,143 @@ nav a:hover{
 .story-right {
     flex: 2;
     line-height: 1.7;
+    color:#c0c0c0 ;
 }
 
 .call {
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.1rem;
+    color: white;
+}
+.menu-section {
+    background-color: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.menu-section h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.menu-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.menu-section p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Gombok */
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu-btn {
+    border: 1px solid white;
+    padding: 12px 35px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ------- SZEKCIÓ ------- */
+.specialitas {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.specialitas h2 {
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.specialitas h4 {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* ------- GRID ------- */
+.grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Nagy vízszintes kép */
+.large {
+    grid-column: span 2;
+}
+
+/* Magas álló kép */
+.tall {
+    grid-row: span 2;
+}
+
+/* ------- KÉPEK + HOVER ------- */
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 5px;
+}
+
+/* Sárgás overlay */
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 200, 0, 0.25); /* sárga átlátszó */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 5px;
+}
+
+/* Hover animáció */
+.item:hover img {
+    transform: scale(1.07);
+}
+
+.item:hover::after {
+    opacity: 1;
+}
+
+/* Felirat */
+.item p {
+    margin-top: 6px;
+    font-size: 14px;
+    font-style: italic;
+    color: #eee;
+    transition: color 0.3s ease;
+}
+
+.item:hover p {
+    color: #ffd75a; /* sárga felirat hoverkor */
 }
