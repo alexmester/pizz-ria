@@ -45,6 +45,12 @@ nav {
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+
+
+
+
+
 nav a:hover{
     color: yellow;
 }
@@ -151,87 +157,67 @@ nav a:hover{
     color: black;
 }
 
-/* ------- SZEKCIÓ ------- */
-.specialitas {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
 
-.specialitas h2 {
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
 
-.specialitas h4 {
-    color: #ccc;
-    margin-bottom: 40px;
-}
 
-/* ------- GRID ------- */
+
 .grid {
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1150px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;   /* Bal oldalt nagy blokk, jobb oldalt keskeny */
+    grid-auto-rows: 260px;
+    gap: 25px;
+}
+
+/* Nagy pizza – bal oldalt 2×2 hely */
+.large {
+    grid-column: 1; 
+    grid-row: span 2; 
+    height: 540px;           /* Pont olyan magas mint a képen */
+}
+
+/* Steak – jobb oldalt magas kép */
+.tall {
+    grid-column: 2;
+    grid-row: span 2;
+    height: 540px;
+}
+
+/* Alsó kis képek – 3 oszlopos elosztás */
+.bottom-row {
+    grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
-/* Nagy vízszintes kép */
-.large {
-    grid-column: span 2;
-}
-
-/* Magas álló kép */
-.tall {
-    grid-row: span 2;
-}
-
-/* ------- KÉPEK + HOVER ------- */
+/* Kép doboz stílusok */
 .item {
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 6px;
 }
 
 .item img {
     width: 100%;
-    display: block;
-    transition: transform 0.4s ease;
-    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
 }
 
-/* Sárgás overlay */
-.item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 200, 0, 0.25); /* sárga átlátszó */
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    border-radius: 5px;
-}
-
-/* Hover animáció */
 .item:hover img {
     transform: scale(1.07);
 }
 
-.item:hover::after {
-    opacity: 1;
-}
-
-/* Felirat */
 .item p {
+    text-align: center;
     margin-top: 6px;
     font-size: 14px;
     font-style: italic;
     color: #eee;
-    transition: color 0.3s ease;
 }
 
 .item:hover p {
-    color: #ffd75a; /* sárga felirat hoverkor */
+    color: #ffd75a;
 }
