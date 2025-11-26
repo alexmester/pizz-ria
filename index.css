@@ -158,66 +158,59 @@ nav a:hover{
 }
 
 
-
-
-
-.grid {
-    max-width: 1150px;
-    margin: 40px auto;
+.container {
     display: grid;
-    grid-template-columns: 2fr 1fr;   /* Bal oldalt nagy blokk, jobb oldalt keskeny */
-    grid-auto-rows: 260px;
-    gap: 25px;
-}
+    grid-template-areas:
+      "pizza1 pizza1 voros"
+      "gomba pizza2 voros"
+      "gomba pizza2 elo"
+      "blank blank elo";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 0.1fr;
+    gap: 10px;
+    padding: 5px;
+    height: 800px;
+  }
+  .container div {
+    padding: 10px;
+  }
+  .container div.gomba {
+    grid-area: gomba;
+  }
+  .container div.pizza1 {
+    grid-area: pizza1;
+    gap: 10px;
+    height: 50vh;
+    width: 100vh;
+    background-image: url(/képek/pizzakep.jpg);
+    background-size: cover;
+   
+  }
+  .container div.pizza2 {
+    grid-area: pizza2;
+    background-image: url(/képek/pizzakep4.jpg);
+    background-size: cover;
+   
+  }
+  .container div.voros {
+    grid-area: voros;
+    background-image: url(/képek/steak.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .container div.blank {
+    grid-area: blank;
+  }
+  .container div.elo {
+    grid-area: elo;
+    background-image: url(/képek/leves.jpg);
+    background-size: cover;
+  }
+  .container div.gomba {
+    grid-area: gomba;
+    background-image: url(/képek/zöldségsaláta.jpg);
+    background-size: cover;
+  }
 
-/* Nagy pizza – bal oldalt 2×2 hely */
-.large {
-    grid-column: 1; 
-    grid-row: span 2; 
-    height: 540px;           /* Pont olyan magas mint a képen */
-}
 
-/* Steak – jobb oldalt magas kép */
-.tall {
-    grid-column: 2;
-    grid-row: span 2;
-    height: 540px;
-}
 
-/* Alsó kis képek – 3 oszlopos elosztás */
-.bottom-row {
-    grid-column: 1 / span 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-/* Kép doboz stílusok */
-.item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 6px;
-}
-
-.item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.4s;
-}
-
-.item:hover img {
-    transform: scale(1.07);
-}
-
-.item p {
-    text-align: center;
-    margin-top: 6px;
-    font-size: 14px;
-    font-style: italic;
-    color: #eee;
-}
-
-.item:hover p {
-    color: #ffd75a;
-}
