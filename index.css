@@ -311,3 +311,64 @@ nav a:hover{
 footer{
     color: #737373;
 }
+
+/* Rejtett checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger ikon alap stílus */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+}
+
+/* ----- MOBIL NÉZET ----- */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 180px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        z-index: 99;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .vonal {
+        display: none;
+    }
+}
