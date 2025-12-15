@@ -270,24 +270,27 @@ nav a:hover{
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    color: #f5f1f1;
 }
  
 .nyitvatartas h2,
 .nyitvatartas h3 {
     font-weight: bold;
     margin-bottom: 15px;
+    color: #f5f1f1;
 }
  
 .nyitvatartas p {
     margin: 10px 0;
     line-height: 1.4;
-    color: #737373;
+    color: grey;
 }
  
 .nyitvatartas hr {
     border: none;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #7a7878;
     margin: 12px 0;
+    color: #f5f1f1;
 }
  
 .foglalas {
@@ -295,6 +298,7 @@ nav a:hover{
     margin-top: 10px;
     text-decoration: underline;
     font-weight: bold;
+    color: #ddd;
 }
  
 .elerhetoseg {
@@ -304,13 +308,20 @@ nav a:hover{
     border-top: 1px solid #333;
     font-size: 14px;
     line-height: 1.6;
+    color: grey;
 }
 .elerhetoseg p {
-    color: #737373;
+    color: grey;
 }
-footer{
-    color: #737373;
+.varunk
+{
+    color: #f5f1f1;
 }
+.szurke{
+    color: grey;
+}
+
+
 
 /* Rejtett checkbox */
 #menu-toggle {
@@ -331,6 +342,48 @@ footer{
     background: white;
 }
 
+
 /* ----- MOBIL NÉZET ----- */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 180px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        z-index: 99;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .vonal {
+        display: none;
+    }
+}
+
 
 
