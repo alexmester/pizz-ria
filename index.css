@@ -292,6 +292,7 @@ nav a:hover{
     margin: 12px 0;
     color: #f5f1f1;
 }
+
  
 .foglalas {
     display: inline-block;
@@ -313,6 +314,13 @@ nav a:hover{
 .elerhetoseg p {
     color: grey;
 }
+.nyitvatartas {
+    width: 100%;
+    max-width: 320px;   
+    margin: 0 auto;     
+    text-align: center;
+}
+
 .varunk
 {
     color: #f5f1f1;
