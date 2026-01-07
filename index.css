@@ -5,7 +5,7 @@ body {
 }
 .header {
     width: 100%;
-    height: 400px; 
+    height: 500px; 
     background-image: url(/képek/pizzakep.jpg);
     background-size: cover;      
     background-position: center;
@@ -234,7 +234,7 @@ nav a:hover{
 }
  
 .item.eloetel {
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: -30px;
 }
  
@@ -394,7 +394,103 @@ nav a:hover{
     .vonal {
         display: none;
     }
+
+
+}
+@media (max-width: 768px) {
+
+    .story-container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .story-left,
+    .story-right {
+        margin: 0;
+    }
+
+    .story-left h3,
+    .tortenet {
+        text-align: right;
+        margin-right: 0;
+    }
+}
+@media (max-width: 768px) {
+
+    .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-btn {
+        width: 10%;
+        text-align: center;
+    }
 }
 
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .item.big,
+    .item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+        margin: 0;
+    }
+
+    .item.eloetel {
+        margin-top: 5px;
+        margin-bottom: -30px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .nyitvatartas {
+        text-align: left;
+        margin-left: 5px;
+
+    }
+
+    .elerhetoseg {
+        margin-left: 5px;
+        margin-right: 20px;
+        text-align: left;
+    }
+    .fejlec {
+        position: relative;
+        overflow: hidden; /* ensures no overflow */
+      }
+      .fejlec img {
+        width: 100%;
+        height: 55vh;
+        object-fit: cover;
+        transform: scale(5);
+      }
+}
+
+@media (max-width: 768px) {
+    .header{
+        background-size: 200%;
+
+
+    }
+
+    
+}
 
 
