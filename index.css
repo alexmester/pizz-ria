@@ -1,31 +1,35 @@
+/* ===== ALAP BEÁLLÍTÁSOK ===== */
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;   /* <<< megakadályozza a jobbra kilógást */
-}
-.header {
-    width: 100%;
-    height: 500px; 
-    background-image: url(/képek/pizzakep.jpg);
-    background-size: cover;      
-    background-position: center;
-    display: flex;
-    align-items: center;
+    margin: 0;              /* Alapértelmezett margók eltávolítása */
+    padding: 0;             /* Alapértelmezett padding eltávolítása */
+    overflow-x: hidden;     /* Megakadályozza a vízszintes görgetést */
 }
 
+/* ===== FEJLÉC (HERO SECTION) ===== */
+.header {
+    width: 100%;                            /* Teljes szélesség */
+    height: 500px;                          /* Fix magasság */
+    background-image: url(/képek/pizzakep.jpg); /* Háttérkép */
+    background-size: cover;                 /* Kitölti a területet */
+    background-position: center;            /* Kép középre igazítása */
+    display: flex;
+    align-items: center;                    /* Tartalom függőlegesen középen */
+}
+
+/* ===== NAVIGÁCIÓ ===== */
 nav {
     width: 100%;
     padding: 10px 20px;
-    display: flex;
-    justify-content: space-between; 
-    align-items:center ;  
-    position: absolute;
+    display: flex;                          /* Elemek egymás mellé */
+    justify-content: space-between;         /* Bal–jobb elrendezés */
+    align-items: center;
+    position: absolute;                     /* Fejléc tetején lebeg */
     top: 0;
     left: 0;
     box-sizing: border-box;
-          
 }
 
+/* Logo szöveg */
 .logo {
     color: white;
     font-size: 2rem;
@@ -33,83 +37,85 @@ nav {
     margin: 0;
 }
 
+/* Menü lista */
 .menu {
     display: flex;
-    gap: 25px;
-    list-style: none;
+    gap: 25px;              /* Távolság a menüpontok között */
+    list-style: none;       /* Lista pontok eltüntetése */
 }
 
+/* Menü linkek */
 .menu a {
     color: white;
-    text-decoration: none;
+    text-decoration: none;  /* Aláhúzás eltávolítása */
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-
-
-
-
-
-nav a:hover{
+/* Menü hover effekt */
+nav a:hover {
     color: yellow;
 }
-.vonal{
+
+/* Függőleges elválasztó vonal */
+.vonal {
     color: white;
 }
-.Piadina{
-    background-color: #202020;
-    width: 100%;
-    height: 450px;
-}
+
+/* ===== STORY / TÖRTÉNET RÉSZ ===== */
 .story {
     background-color: #202020;
     padding: 60px 0;
     color: white;
 }
 
+/* Story tartalom konténer */
 .story-container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    display: flex;
+    display: flex;                  /* Két oszlop */
     justify-content: space-between;
     gap: 10px;
 }
 
+/* Bal oldali szöveg */
 .story-left {
     flex: 1;
     text-align: left;
     margin-right: 50px;
 }
 
+/* Alcím */
 .story-left h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     text-align: right;
-    margin-right: 50px;
 }
 
+/* Rövid történet szöveg */
 .tortenet {
     color: #c0c0c0;
     font-size: 1rem;
     text-align: right;
-    margin-right: 50px;
-    
 }
 
+/* Jobb oldali hosszabb szöveg */
 .story-right {
     flex: 2;
     line-height: 1.7;
-    color:#c0c0c0 ;
+    color: #c0c0c0;
 }
 
+/* Kiemelt szöveg */
 .call {
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.1rem;
     color: white;
 }
+
+/* ===== MENÜ SZEKCIÓ ===== */
 .menu-section {
     background-color: #0f0f0f;
     color: white;
@@ -117,153 +123,88 @@ nav a:hover{
     padding: 60px 20px;
 }
 
-.menu-section h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.menu-section h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #ccc;
-}
-
-.menu-section p {
-    max-width: 100%;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-    color: #ddd;
-}
-
-/* Gombok */
+/* Menü gombok */
 .menu-buttons {
     display: flex;
     justify-content: center;
     gap: 25px;
 }
 
+/* Menü gomb stílus */
 .menu-btn {
     border: 1px solid white;
     padding: 12px 35px;
     text-decoration: none;
     color: white;
-    letter-spacing: 1px;
     transition: 0.3s;
 }
 
+/* Menü gomb hover */
 .menu-btn:hover {
     background-color: white;
     color: black;
 }
 
-
-/* Specialításaink rész */
-.menucim{
-    padding-top: 80px;
-    text-align: center;
-}
-.specialitasok h3{
-    text-align: center;
-}
+/* ===== SPECIALITÁSOK RÉSZ ===== */
 .specialis {
     text-align: center;
     padding: 60px 0;
-    color: #eee;
     background-color: #2b2b2b;
+    color: #eee;
 }
- 
-.specialis h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
- 
-.specialis p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #cfcfcf;
-}
- 
+
+/* Grid elrendezés képekhez */
 .grid {
     max-width: 800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 oszlop */
     grid-auto-rows: 250px;
     gap: 30px;
 }
- 
+
+/* Egy-egy elem */
 .item {
     position: relative;
     overflow: hidden;
 }
- 
+
+/* Képek */
 .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: .3s ease;
 }
-.grid div:hover{
-    transition: .3s ease;
-    background-color: yellow 60%;
-}
- 
-.item span {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    color:white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    
-}
- 
-/* Nagy bal oldali pizza */
-.item.big {
-    grid-column: span 2;
-    grid-row: span 2;
-}
- 
-/* Jobb oldali magas steak */
-.item.tall {
-    grid-row: span 2;
-    margin-bottom: -60px;
-}
- 
-.item.eloetel {
-    margin-top: 20px;
-    margin-bottom: -30px;
-}
- 
 
-
-
-/* Citromsárga overlay (rejtve alapból) */
+/* Hover overlay (sárga réteg) */
 .grid .item::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 242, 0, 0.45); /* CITROMSÁRGA #FFF200 */
+    inset: 0;
+    background: rgba(255, 242, 0, 0.45);
     opacity: 0;
     transition: opacity 0.35s ease;
 }
 
-/* Hoverkor láthatóvá válik */
+/* Hoverkor megjelenik */
 .grid .item:hover::after {
     opacity: 1;
 }
 
+/* Nagy elem */
+.item.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* ===== FOOTER ===== */
 .footer {
     padding: 50px 0;
     background: #000;
 }
- 
+
+/* Footer tartalom */
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -273,73 +214,14 @@ nav a:hover{
     color: #f5f1f1;
 }
 
- 
-.nyitvatartas h2,
-.nyitvatartas h3 {
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #f5f1f1;
-}
- 
-.nyitvatartas p {
-    margin: 10px 0;
-    line-height: 1.4;
-    color: grey;
-}
- 
-.nyitvatartas hr {
-    border: none;
-    border-bottom: 1px solid #7a7878;
-    margin: 12px 0;
-    color: #f5f1f1;
-}
+/* ===== HAMBURGER MENÜ ===== */
 
- 
-.foglalas {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: underline;
-    font-weight: bold;
-    color: #ddd;
-}
- 
-.elerhetoseg {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    margin-left: 90px;
-    margin-right:90px ;
-    font-size: 14px;
-    line-height: 1.6;
-    color: grey;
-}
-.elerhetoseg p {
-    color: grey;
-}
-.nyitvatartas {
-    width: 100%;
-    max-width: 320px;   
-    margin: 0 auto;     
-    text-align: left;
-}
-
-.varunk
-{
-    color: #f5f1f1;
-}
-.szurke{
-    color: grey;
-}
-
-
-
-/* Rejtett checkbox */
+/* Checkbox elrejtése */
 #menu-toggle {
     display: none;
 }
 
-/* Hamburger ikon alap stílus */
+/* Hamburger ikon */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -347,150 +229,39 @@ nav a:hover{
     cursor: pointer;
 }
 
+/* Hamburger vonalak */
 .hamburger span {
     width: 28px;
     height: 3px;
     background: white;
 }
 
-
-/* ----- MOBIL NÉZET ----- */
-
+/* ===== MOBIL NÉZET ===== */
 @media (max-width: 768px) {
 
-    nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        z-index: 200;
-    }
-
+    /* Menü mobilon */
     .menu {
         position: absolute;
         top: 60px;
         right: 20px;
         background-color: rgba(0, 0, 0, 0.95);
-        width: 180px;
         flex-direction: column;
-        gap: 15px;
         padding: 20px;
         display: none;
-        z-index: 99;
     }
 
+    /* Menü megjelenítése checkboxra */
     #menu-toggle:checked ~ .menu {
         display: flex;
     }
 
-    .vonal {
-        display: none;
-    }
-
-
-}
-@media (max-width: 768px) {
-
-    .story-container {
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .story-left,
-    .story-right {
-        margin: 0;
-    }
-
-    .story-left h3,
-    .tortenet {
-        text-align: right;
-        margin-right: 0;
-    }
-}
-@media (max-width: 768px) {
-
-    .menu-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-btn {
-        width: 10%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-
+    /* Grid mobilon 1 oszlop */
     .grid {
         grid-template-columns: 1fr;
-        padding-left: 15px;
-        padding-right: 15px;
     }
 
-    .item.big,
-    .item.tall {
-        grid-column: span 1;
-        grid-row: span 1;
-        margin: 0;
-    }
-
-    .item.eloetel {
-        margin-top: 5px;
-        margin-bottom: -30px;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-
+    /* Footer mobil elrendezés */
     .footer-container {
         flex-direction: column;
-        gap: 40px;
-        text-align: left;
-        margin-left: 20px;
     }
-
-    .nyitvatartas {
-        text-align: left;
-        margin-left: 5px;
-
-    }
-
-    .elerhetoseg {
-        margin-left: 5px;
-        margin-right: 20px;
-        text-align: left;
-    }
-    .fejlec {
-        position: relative;
-        overflow: hidden; /* ensures no overflow */
-      }
-      .fejlec img {
-        width: 100%;
-        height: 55vh;
-        object-fit: cover;
-        transform: scale(5);
-      }
 }
-
-@media (max-width: 768px) {
-    .header{
-        background-size: 200%;
-
-
-    }
-
-    
-}
-
-
