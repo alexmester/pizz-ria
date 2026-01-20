@@ -13,6 +13,7 @@ body {
     align-items: center;
 }
 
+
 nav {
     width: 100%;
     padding: 10px 20px;
@@ -31,9 +32,11 @@ nav {
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
+    
 }
 
 .menu {
+    
     display: flex;
     gap: 25px;
     list-style: none;
@@ -84,15 +87,15 @@ nav a:hover{
 }
 
 .story-left h3 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     text-align: right;
     margin-right: 50px;
 }
 
 .tortenet {
-    color: #c0c0c0;
-    font-size: 1rem;
+    color: #b8b6b6;
+    font-size: 1.3rem;
     text-align: right;
     margin-right: 50px;
     
@@ -102,6 +105,7 @@ nav a:hover{
     flex: 2;
     line-height: 1.7;
     color:#c0c0c0 ;
+    font-size:1.2rem ;
 }
 
 .call {
@@ -428,6 +432,9 @@ nav a:hover{
 }
 @media (max-width: 768px) {
 
+    .Piadina{
+        height: 4.rem;
+    }
     .story-container {
         flex-direction: column;
         text-align: left;
